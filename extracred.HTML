@@ -1,0 +1,119 @@
+<html> 
+    <head> 
+<title> GPA Calculator </title>
+<style>
+
+.p {font-size: x-large;}
+
+</style>
+
+<script> 
+var one = first
+var value1 = 0
+var two = second 
+value2 = 0
+var three = third 
+value3 = 0
+var four = fourth 
+value4 = 0
+var five = fifth 
+value5 = 0
+var GPA = 0
+
+
+function firstGrade () { 
+one = document.getElementById("first").value; 
+document.getElementById("first").focus();
+if(one=="A") {document.getElementById("message1").innerHTML = "The value of this grade = 4.0"; value1=4;}
+if(one=="B") {document.getElementById("message1").innerHTML = "The value of this grade = 3.0"; value1=3;}
+if(one=="C") {document.getElementById("message1").innerHTML = "The value of this grade = 2.0"; value1=2;}
+if(one=="D") {document.getElementById("message1").innerHTML = "The value of this grade = 1.0"; value1=1;}
+if(one=="F") {document.getElementById("message1").innerHTML = "The value of this grade = 0.0"; value1=0;}
+}
+
+function secondGrade () { 
+    document.getElementById("second").focus();
+two = document.getElementById("second").value; 
+if(two=="A") {document.getElementById("message2").innerHTML = "The value of this grade = 4.0"; value2=4; }
+if(two=="B") {document.getElementById("message2").innerHTML = "The value of this grade = 3.0"; value2=3; }
+if(two=="C") {document.getElementById("message2").innerHTML = "The value of this grade = 2.0"; value2=2;}
+if(two=="D") {document.getElementById("message2").innerHTML = "The value of this grade = 1.0"; value2=1; }
+if(two=="F") {document.getElementById("message2").innerHTML = "The value of this grade = 0.0"; value2=0;}}
+
+function thirdGrade () { 
+    document.getElementById("third").focus();
+three = document.getElementById("third").value; 
+if(three=="A") {document.getElementById("message3").innerHTML = "The value of this grade = 4.0"; value3=4; }
+if(three=="B") {document.getElementById("message3").innerHTML = "The value of this grade = 3.0"; value3=3; }
+if(three=="C") {document.getElementById("message3").innerHTML = "The value of this grade = 2.0"; value3=2; }
+if(three=="D") {document.getElementById("message3").innerHTML = "The value of this grade = 1.0"; value3=1; }
+if(three=="F") {document.getElementById("message3").innerHTML = "The value of this grade = 0.0"; value3=0; }}
+
+function fourthGrade () { 
+    document.getElementById("fourth").focus();
+four = document.getElementById("fourth").value; 
+if(four=="A") {document.getElementById("message4").innerHTML = "The value of this grade = 4.0"; value4=4;}
+if(four=="B") {document.getElementById("message4").innerHTML = "The value of this grade = 3.0"; value4=3;}
+if(four=="C") {document.getElementById("message4").innerHTML = "The value of this grade = 2.0"; value4=2;}
+if(four=="D") {document.getElementById("message4").innerHTML = "The value of this grade = 1.0"; value4=1;}
+if(four=="F") {document.getElementById("message4").innerHTML = "The value of this grade = 0.0"; value4=0;}}
+
+function fifthGrade () { 
+    document.getElementById("fifth").focus();
+five = document.getElementById("fifth").value; 
+if(five=="A") {document.getElementById("message5").innerHTML = "The value of this grade = 4.0"; value5=4; }
+if(five=="B") {document.getElementById("message5").innerHTML = "The value of this grade = 3.0"; value5=3; }
+if(five=="C") {document.getElementById("message5").innerHTML = "The value of this grade = 2.0"; value5=2; }
+if(five=="D") {document.getElementById("message5").innerHTML = "The value of this grade = 1.0"; value5=1; }
+if(five=="F") {document.getElementById("message5").innerHTML = "The value of this grade = 0.0"; value5=0;}}
+
+function average () {  
+document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5; 
+GPA = (value1+value2+value3+value4+value5)/5;
+if(GPA>=3.7) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + ".0 | That's an A! Congrats, you're on the High Honor Roll!"; } 
+if(GPA<3.7 && GPA>=3.5) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's an A-! Congrats, you're on the Honor Roll!"; }
+if(GPA<3.5 && GPA>=3.3) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's a B+!";} 
+if(GPA<3.3 && GPA>=2.7) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's a B!";}
+if(GPA<2.7 && GPA>=2.5){document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's a B-!";} 
+if(GPA<2.5 && GPA>=2.3){document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's a C+!";} 
+if(GPA<2.3 && GPA>=1.7){document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's a C!";}
+if(GPA<1.7 && GPA>=1.5) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's a C-!";} 
+if(GPA<1.5 && GPA>=1) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + " | That's a D!";}
+if(GPA<1) {document.getElementById("calculate").innerHTML = (value1+value2+value3+value4+value5)/5 + ".0 | That's an F! Unfortunately, you're on Academic Probation...";}}
+
+
+function resetCalculator () { 
+    document.getElementById("first").value = "";
+    document.getElementById("second").value = "";
+    document.getElementById("third").value = "";
+    document.getElementById("fourth").value = "";
+    document.getElementById("fifth").value = "";
+    document.getElementById("message1").innerHTML = "The value of this grade = "; 
+    document.getElementById("message2").innerHTML = "The value of this grade = ";
+    document.getElementById("message3").innerHTML = "The value of this grade = ";
+    document.getElementById("message4").innerHTML = "The value of this grade = ";
+    document.getElementById("message5").innerHTML = "The value of this grade = ";
+}
+</script>
+</head>
+
+
+<body style="background-color:#ff8585"; style="color:white">
+<center> 
+<h1> Enter your <u>letter</u> grades below (from A to F) to calculate your GPA! </h1>
+<br> <br> <br> 
+First Class: <input id="first"> <button onclick="firstGrade()"style="font-size: larger;"> Submit </button> <p id="message1">The value of this grade = </p><br> <br> 
+Second Class: <input id="second"> <button onclick="secondGrade()"style="font-size: larger;"> Submit </button> <p id="message2">The value of this grade = </p> <br> <br> 
+Third Class: <input id="third"> <button onclick="thirdGrade()"style="font-size: larger;"> Submit </button> <p id="message3">The value of this grade = </p> <br> <br> 
+Fourth Class: <input id="fourth"> <button onclick="fourthGrade()"style="font-size: larger;"> Submit </button> <p id="message4">The value of this grade = </p><br> <br> 
+Fifth Class: <input id="fifth"> <button onclick="fifthGrade()"style="font-size: larger;"> Submit </button> <p id="message5">The value of this grade = </p><br> <br> <br> <br> 
+
+<button id="calculate" onclick="average()" style="font-size: x-large;"> Your Cumulative GPA </button> <br> <br> 
+<button id="reset" onclick="resetCalculator()" style="font-size: x-large;"> Clear </button>
+
+</center>
+    
+
+</body>
+
+</html>
